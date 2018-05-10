@@ -9,10 +9,17 @@ h1{
     text-align: center;
 }
 
+.botImg{
+    display: none;
+    margin-top: 5px;
+}
 
 @media screen and (max-width: 860px) { 
     img{
         display:none;
+    }
+    .botImg{
+        display:inline-block;
     }
     
   }
