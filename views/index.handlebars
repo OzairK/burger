@@ -1,31 +1,44 @@
 <h1> Burgers</h1>
-
-<h2> Burger ready to eat</h2>
-
-<ul>
-  {{#each burgers}} {{#unless devoured}} {{> burgers/burger-block devoured=true}} {{/unless}} {{/each}}
-</ul>
-
-
-<h2> Burgers Devoured</h2>
-<ul>
-  {{#each burgers}} {{#if devoured}}
-  <li> {{burger_name}} </li>
-  {{/if}} {{/each}}
-</ul>
-
-
-
-<h2>Add a Burger</h2>
-<form class="create-form">
-
-  <div class="form-group">
-    <label for="ca">Burger Name:</label>
-    <input type="text" id="ca" name="burger_name">
+<div class="row">
+  <div class="col-2"></div>
+  <div class="col-3">
+    <h2 class="leftSide"> Burger ready to eat</h2>
+    <ul class="leftSide">
+      {{#each burgers}} {{#unless devoured}} {{> burgers/burger-block devoured=true}} {{/unless}} {{/each}}
+    </ul>
   </div>
 
-  <button id="hi" type="submit">Add Burger</button>
-</form>
+  <div class="col-2"></div>
+
+  <div class="col-3">
+    <h2 class="rightSide"> Burgers Devoured</h2>
+    <ul class="rightSide">
+      {{#each burgers}} {{#if devoured}}
+      <li> {{burger_name}} </li>
+      {{/if}} {{/each}}
+    </ul>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-5"></div>
+  <div class="col-2">
+    <h2 class="middlePos">Add a Burger</h2>
+    <form class="create-form middlePos">
+      <div class="form-group">
+        <label for="ca">Burger Name:</label>
+        <input type="text" id="ca" name="burger_name">
+      </div>
+      <button id="hi" type="submit" class="btn btn-primary">Add Burger</button>
+    </form>
+  </div>
+</div>
+
+
+
+
+
+
 
 <script type="text/javascript">
   $(function () {
@@ -45,7 +58,7 @@
         });
     })
 
-    $(".change-devoured").on("click", function(event) {
+    $(".change-devoured").on("click", function (event) {
       var id = $(this).data("id");
       var newDevour = $(this).data("newdevoured");
       var devouredState = {
