@@ -8,3 +8,12 @@ h1{
 .middlePos{
     text-align: center;
 }
+
+
+@media screen and (max-width: 860px) { 
+    img{
+        display:none;
+    }
+    
+  }
+  
