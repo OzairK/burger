@@ -1,5 +1,7 @@
 var connection = require("./connection.js");
 
+//helper func for SQL syntax
+//add appopriate number of ? in string format.
 function printQuestionMarks(num){
     var array =[];
 
@@ -9,20 +11,17 @@ function printQuestionMarks(num){
     return array.toString();
 }
 
+//helper func to convert object key/value pairs to SQL syntax
+// e.g. {name: 'Lana Del Grey'} => ["name='Lana Del Grey'"]
+// e.g. {sleepy: true} => ["sleepy=true"]
 function objToSql(ob) {
     var arr = [];
-  
-    // loop through the keys and push the key/value as a string int arr
-    for (var key in ob) {
+      for (var key in ob) {
       var value = ob[key];
-      // check to skip hidden properties
       if (Object.hasOwnProperty.call(ob, key)) {
-        // if string with spaces, add quotations (Lana Del Grey => 'Lana Del Grey')
         if (typeof value === "string" && value.indexOf(" ") >= 0) {
           value = "'" + value + "'";
         }
-        // e.g. {name: 'Lana Del Grey'} => ["name='Lana Del Grey'"]
-        // e.g. {sleepy: true} => ["sleepy=true"]
         arr.push(key + "=" + value);
       }
     }
