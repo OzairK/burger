@@ -10,7 +10,10 @@ The Burger will then be moved to the right side under section "Burgers Devoured"
 +Express
 +Handlebars 
 +custom ORM 
-+JavaScript, JQuery, HTML, CSS & Bootstrap
++JavaScript
++JQuery 
++HTML 
++CSS & Bootstrap
 
 ## Code Design
 MVC design pattern
