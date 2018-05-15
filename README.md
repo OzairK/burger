@@ -9,7 +9,7 @@ The Burger will then be moved to the right side under section "Burgers Devoured"
 +Node
 +Express
 +Handlebars 
-+custom ORM. 
++custom ORM 
 +JavaScript, JQuery, HTML, CSS & Bootstrap
 
 ## Code Design
