@@ -5,12 +5,12 @@ Once the Burger is added to the left side of the page, under "ready to eat", use
 The Burger will then be moved to the right side under section "Burgers Devoured"
 
 ## Technology Used
-*MySQL 
-*Node
-*Express
-*Handlebars 
-*custom ORM. 
-*JavaScript, JQuery, HTML, CSS & Bootstrap
+-MySQL 
+-Node
+-Express
+-Handlebars 
+-custom ORM. 
+-JavaScript, JQuery, HTML, CSS & Bootstrap
 
 ## Code Design
 MVC design pattern
